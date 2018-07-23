@@ -24,6 +24,7 @@ class CreateOauthClientCommand extends Command
     $this->clientManager = $clientManager;
   }
 
+//  php bin/console create:oauth:client --grant-type="password" --grant-type="refresh_token"
   protected function configure()
   {
     $this
