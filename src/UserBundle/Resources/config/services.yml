@@ -1,0 +1,5 @@
+services:
+    user.service:
+        class: UserBundle\Services\UserService
+        autowire: true
+        public: true

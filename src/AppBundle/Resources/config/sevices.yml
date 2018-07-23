@@ -1,0 +1,5 @@
+services:
+    app.service:
+        class: AppBundle\Services\AppService
+        autowire: true
+        public: true

@@ -1,0 +1,6 @@
+services:
+    application_server.command.create_oauth_client:
+        class: AuthenticateBundle\Command\CreateOauthClientCommand
+        arguments: ["@fos_oauth_server.client_manager.default"]
+        tags:
+            -  { name: console.command }
