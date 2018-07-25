@@ -24,6 +24,9 @@ class CreateOauthClientCommand extends Command
     $this->clientManager = $clientManager;
   }
 
+//Public ID: 1_5cx795qme680koogwss4wwks4g8408gs408csoo408w0c88s4c
+//Secret ID: 1qwyropmbmo08kk0wwsgogc4wcw00sogcooko80g8840w0k84k
+
 //  php bin/console create:oauth:client --grant-type="client_credentials" --grant-type="password" --grant-type="token"
   protected function configure()
   {

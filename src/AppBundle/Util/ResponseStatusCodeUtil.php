@@ -10,10 +10,10 @@ class ResponseStatusCodeUtil
   {
     $reponse = array(
       'code' => $code,
-      'message' =>$message,
+      'message' => $message,
       'data' => $data
     );
-    
+
     return $reponse;
   }
 }

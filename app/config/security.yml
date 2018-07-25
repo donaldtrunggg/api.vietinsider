@@ -1,13 +1,29 @@
 # To get started with security, check out the documentation:
 # https://symfony.com/doc/current/security.html
 security:
+      encoders:
+          UserBundle\Entity\User:
+              algorithm: bcrypt
+              encode_as_base64: false
+              iterations: 1
       providers:
-          in_memory:
-              memory: ~
+          mapping_user:
+              entity:
+                  class: UserBundle\Entity\User
+                  property: username
 
       firewalls:
+          register:
+              pattern: ^/register
+              security: false
+
+          login:
+              pattern: ^/login
+              security: false
+
           oauth_token:
               pattern:  ^/oauth/v2/token
+              provider: mapping_user
               security: false
 
           secured_area:
@@ -15,6 +31,12 @@ security:
               fos_oauth:  true
               stateless:  true
 
+#          main:
+#              anonymous: ~
+#              http_basic: ~
+
       access_control:
+          - { path: ^/register, roles: [ IS_ANONYMOUS ] }
           - { path: ^/, roles: [ IS_AUTHENTICATED_FULLY ] }
+
 

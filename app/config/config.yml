@@ -100,10 +100,12 @@ fos_oauth_server:
     db_driver:           orm
     client_class:        AuthenticateBundle\Entity\Client
     access_token_class:  AuthenticateBundle\Entity\AccessToken
-    refresh_token_class: FOS\OAuthServerBundle\Entity\RefreshToken # Not implemented in this example
-    auth_code_class:     FOS\OAuthServerBundle\Entity\AuthCode # Not implemented in this example
+    refresh_token_class: AuthenticateBundle\Entity\RefreshToken # Not implemented in this example
+    auth_code_class:     AuthenticateBundle\Entity\AuthCode # Not implemented in this example
     service:
+        user_provider: security.user.provider.concrete.mapping_user
         options:
             access_token_lifetime: 3600
+
 
 

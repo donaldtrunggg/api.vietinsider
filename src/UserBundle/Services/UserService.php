@@ -3,48 +3,27 @@
 namespace UserBundle\Services;
 
 use AppBundle\Services\AppService;
-use AppBundle\Util\RepositoryUtil;
-use FOS\RestBundle\View\View;
-use UserBundle\Entity\Login;
-use UserBundle\Entity\RegistrationInfo;
+use UserBundle\Entity\User;
 
 class UserService extends AppService
 {
   public function getUser($criteria)
   {
-    $registrationInfoRepo = $this->getEntityManager()->getRepository(RepositoryUtil::REGISTRATION_INFO_REPO);
-    $registrationInfo = $registrationInfoRepo->findOneBy($criteria);
+    $userRepo = $this->getEntityManager()->getRepository(User::class);
+    $user = $userRepo->findOneBy($criteria);
 
-    return $registrationInfo;
+    return $user;
   }
 
-  public function insertUser($data)
+  public function insert($data)
   {
-    $user = new RegistrationInfo($data);
+    $user = new User();
+    $user->setUsername($data['username']);
+    $user->setPassword($data['password']);
+    $user->setTypelogin($data['typelogin']);
+    $user->setFullName($data['fullname']);
 
     $this->getEntityManager()->persist($user);
     $this->getEntityManager()->flush();
-  }
-
-  public function updateLogin($userId, $lang)
-  {
-    $loginRepo = $this->getEntityManager()->getRepository(RepositoryUtil::LOGIN_REPO);
-    $login = $loginRepo->findOneBy(['uid' => $userId]);
-
-    if (!isset($login)) {
-      $login = new Login();
-    }
-
-    $accessToken = bin2hex(random_bytes(50));
-    $login->setAccesstoken($accessToken);
-
-    $login->setUid($userId);
-    $login->setLastlogin(new \DateTime());
-    $login->setLang($lang);
-
-    $this->getEntityManager()->persist($login);
-    $this->getEntityManager()->flush();
-
-    return $accessToken;
   }
 }
