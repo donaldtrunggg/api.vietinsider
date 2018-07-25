@@ -44,7 +44,6 @@ twig:
 doctrine:
     dbal:
         server_version: '5.5'
-#        driver: pdo_mysql
         driver: pdo_pgsql
         host: '%database_host%'
         port: '%database_port%'
