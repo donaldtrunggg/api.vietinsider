@@ -12,7 +12,6 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class CreateOauthClientCommand extends Command
 {
-  const REDIRECT_URI = 'redirect-uri';
   const GRANT_TYPE = 'grant-type';
 
   private $clientManager;
@@ -24,7 +23,10 @@ class CreateOauthClientCommand extends Command
     $this->clientManager = $clientManager;
   }
 
-//  php bin/console create:oauth:client --grant-type="password" --grant-type="refresh_token"
+//Public ID: 2_1w6gwy6mj6yskssoc4044k4co4wosgck800o044kgo004gwgww
+//Secret ID: 4mftuj5k804ko0ssg88cgo4o4kkkosswggw8gc4sw4kg0ogksk
+
+//  php bin/console create:oauth:client --grant-type="token" --grant-type="password" --grant-type="refresh_token"
   protected function configure()
   {
     $this

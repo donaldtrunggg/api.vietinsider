@@ -3,17 +3,27 @@
 security:
       providers:
           in_memory:
-              memory: ~
+              memory:
+                  users:
+                      donald:
+                          password: 111111
+                          roles: 'ROLE_ADMIN'
+      encoders:
+          Symfony\Component\Security\Core\User\User: plaintext
 
       firewalls:
+          main:
+              anonymous: ~
+              http_basic: ~
           oauth_token:
               pattern:  ^/oauth/v2/token
               security: false
 
           secured_area:
-              pattern:    ^/
+              pattern:    ^/php bin/console config:dump-reference web_profiler
               fos_oauth:  true
               stateless:  true
 
       access_control:
           - { path: ^/, roles: [ IS_AUTHENTICATED_FULLY ] }
+
