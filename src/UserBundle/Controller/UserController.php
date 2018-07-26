@@ -16,6 +16,6 @@ class UserController extends FOSRestController
    */
   public function getAction()
   {
-    dump($this->getUser());
+    printf($this->getUser());
   }
 }
