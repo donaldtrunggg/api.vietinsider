@@ -4,9 +4,9 @@
 parameters:
     database_host: ec2-184-73-202-229.compute-1.amazonaws.com
     database_port: 5432
-    database_name: d7tfs3djrsqkgt
-    database_user: gepaehtfluuzqx
-    database_password: MkmfGCctWYtjcpbwqJlpV7feuA
+    database_name: d6mlo6mg1au0je
+    database_user: pcixbvmfwzhoca
+    database_password: 733e153f4f492698228c1a5b568b2c753b2147641837b805fb99c9dc789b0ed1
     # You should uncomment this if you want to use pdo_sqlite
     #database_path: '%kernel.project_dir%/var/data/data.sqlite'
 
