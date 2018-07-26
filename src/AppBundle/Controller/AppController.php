@@ -16,7 +16,7 @@ use FOS\RestBundle\View\View;
 class AppController extends Controller
 {
   /**
-   * @Rest\Get("/register")
+   * @Rest\Post("/register")
    */
   public function registerAction(Request $request)
   {
