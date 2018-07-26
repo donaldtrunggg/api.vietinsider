@@ -9,8 +9,8 @@ security:
       providers:
           mapping_user:
               entity:
-#                  class: UserBundle\Entity\User
-#                  property: username
+                  class: UserBundle\Entity\User
+                  property: username
 
       firewalls:
           register:
