@@ -1,11 +1,11 @@
 # To get started with security, check out the documentation:
 # https://symfony.com/doc/current/security.html
 security:
-#      encoders:
-#          UserBundle\Entity\User:
-#              algorithm: bcrypt
-#              encode_as_base64: false
-#              iterations: 1
+      encoders:
+          UserBundle\Entity\User:
+              algorithm: bcrypt
+              encode_as_base64: false
+              iterations: 1
       providers:
           mapping_user:
               entity:
