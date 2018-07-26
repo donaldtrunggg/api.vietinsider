@@ -2,7 +2,7 @@
 # Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
 # https://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
 parameters:
-    database_host: ec2-184-73-202-229.compute-1.amazonaws.com
+    database_host: ec2-50-19-86-139.compute-1.amazonaws.com
     database_port: 5432
     database_name: d6mlo6mg1au0je
     database_user: pcixbvmfwzhoca
