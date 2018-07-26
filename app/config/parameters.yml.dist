@@ -4,7 +4,7 @@
 parameters:
     database_host: ec2-54-235-177-183.compute-1.amazonaws.com
     database_port: 5432
-    database_name: aa
+    database_name: dt5hta46nsoi8
     database_user: ymqdhffyykfzhf
     database_password: a6ddf14111baea9e5265e2f42396a29d6080e31da47ebfc7d7122a3799734c88
     # You should uncomment this if you want to use pdo_sqlite
