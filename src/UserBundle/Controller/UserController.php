@@ -10,12 +10,11 @@ use FOS\RestBundle\View\View;
 
 class UserController extends FOSRestController
 {
-
   /**
    * @Rest\Get("/user")
    */
   public function getAction()
   {
-    print_r('D co gi');
+    return new View('deo co gi', 200);
   }
 }
