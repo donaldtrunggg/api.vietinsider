@@ -16,6 +16,6 @@ class UserController extends FOSRestController
    */
   public function getAction()
   {
-    printf($this->getUser());
+    return new View($this->getUser(), Response::HTTP_FOUND);
   }
 }
