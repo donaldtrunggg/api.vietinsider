@@ -7,8 +7,8 @@ security:
 #              encode_as_base64: false
 #              iterations: 1
       providers:
-#          mapping_user:
-#              entity:
+          mapping_user:
+              entity:
 #                  class: UserBundle\Entity\User
 #                  property: username
 
