@@ -102,7 +102,7 @@ fos_oauth_server:
     refresh_token_class: AuthenticateBundle\Entity\RefreshToken # Not implemented in this example
     auth_code_class:     AuthenticateBundle\Entity\AuthCode # Not implemented in this example
     service:
-        user_provider: security.user.provider.concrete.mapping_user
+#        user_provider: security.user.provider.concrete.mapping_user
         options:
             access_token_lifetime: 3600
 
