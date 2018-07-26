@@ -27,7 +27,7 @@ class AppController extends Controller
       'fullname' => $request->request->get('fullname')
     );
 
-    $locale = 'en';
+    $locale = $request->headers->get('accept-language');
     $view = ValidationUtil::isRegisterInfoValid($data, $locale, $isValid);
 
     if (!$isValid) {
